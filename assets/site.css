@@ -1,0 +1,116 @@
+/* VOICE everyday and warm: a person's site, with VoiceMe as one project
+   IDEA an AAC communication board: colour-coded word tiles (people yellow, actions green, things orange, describing blue, social pink)
+   PICTURE home: a board of tiles about Ken; VoiceMe: a working iPad sketch of the app
+   COLOUR white ground, near-black ink, sunflower yellow band leading, board colours as working accents
+   TYPE Lexend 700 display + Atkinson Hyperlegible text (both built for readability)
+   LAYOUT laptop: yellow band with intro left and picture right; phone: title, picture, then text */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#131517);--ink:light-dark(#17181a,#f3f1ea);--soft:light-dark(#55575c,#b5b3ad);--line:light-dark(#e4e2dc,#2c2f33);--band:light-dark(#ffd23f,#3a3110);--bandink:light-dark(#17181a,#fff6d6);--panel:light-dark(#f7f6f2,#1b1e21);--y:#ffd23f;--g:#4cc47a;--o:#ff9a4d;--b:#5b9dff;--p:#ff7fae;--tileink:#17181a;--dev:light-dark(#1d1f22,#0a0b0c)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Atkinson Hyperlegible",system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+h1,h2,h3{font-family:Lexend,system-ui,sans-serif;font-weight:700;line-height:1.05;letter-spacing:-.02em;text-wrap:balance;margin:0}
+h1{font-size:clamp(36px,5vw,52px)}
+h2{font-size:clamp(28px,3.4vw,38px);margin-bottom:16px}
+h3{font-size:21px;margin-bottom:6px;line-height:1.2}
+p{margin:0 0 14px;max-width:62ch}
+.band{padding-block:clamp(32px,5vw,72px);padding-left:max(5vw,16px);padding-right:max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+nav{position:sticky;top:0;z-index:5;background:var(--band);color:var(--bandink);border-bottom:1px solid color-mix(in srgb,var(--bandink) 12%,transparent)}
+nav .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:4px 18px;padding:12px max(5vw,16px)}
+.mark{font:700 22px Lexend,sans-serif;text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:10px}
+.mark i{display:grid;grid-template-columns:repeat(2,9px);gap:3px}
+.mark i b{width:9px;height:9px;border-radius:2px;background:var(--bandink)}
+.mark i b:nth-child(2){background:var(--g)}
+.mark i b:nth-child(3){background:var(--o)}
+.mark i b:nth-child(4){background:var(--b)}
+nav a.l{text-decoration:none;padding:10px 4px;font-weight:700;border-bottom:3px solid transparent}
+nav a.l:hover,nav a.l[aria-current]{border-color:currentColor}
+.hero{background:var(--band);color:var(--bandink)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);align-items:center}
+.lede{font-size:19px;color:var(--bandink);opacity:.86;margin-top:18px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;border-radius:12px;font-weight:700;text-decoration:none;border:2px solid currentColor;cursor:pointer;font-size:16px;font-family:inherit;background:transparent;color:inherit}
+.btn.solid{background:var(--bandink);color:var(--band);border-color:var(--bandink)}
+.btn:focus-visible,.tile:focus-visible,input:focus-visible,button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--b);outline-offset:3px}
+/* home: tiles about Ken */
+.me{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.me div{border-radius:18px;padding:18px;min-height:130px;display:flex;flex-direction:column;justify-content:flex-end;color:var(--tileink);box-shadow:inset 0 -6px 0 rgba(0,0,0,.14)}
+.me .big{grid-column:span 2;grid-row:span 2;background:#fff;border:3px solid var(--tileink)}
+.me .wide{grid-column:1/-1;min-height:96px}
+.me .k{background:var(--tileink);color:#fff6d6}
+.me b{font:700 clamp(20px,2.4vw,30px)/1.1 Lexend,sans-serif;letter-spacing:-.02em}
+.me .big b{font-size:clamp(28px,3.6vw,44px)}
+.me span{font-size:15px;margin-top:6px;opacity:.85}
+/* VoiceMe: the device */
+.ipad{background:var(--dev);border-radius:34px;padding:16px;box-shadow:0 24px 0 -12px color-mix(in srgb,#000 22%,transparent);max-width:680px;margin-inline:auto;width:100%}
+.screen{background:#fbfaf7;color:#17181a;border-radius:20px;padding:14px;display:grid;gap:12px}
+.sbar{display:flex;justify-content:space-between;font-size:13px;color:#55575c;padding:0 4px}
+.msg{display:flex;gap:8px;align-items:stretch}
+.msg input{flex:1;font:700 clamp(17px,2vw,22px) "Atkinson Hyperlegible",sans-serif;padding:12px 14px;border:2px solid #d9d6cd;border-radius:14px;background:#fff;color:#17181a;min-height:56px}
+.speak{border:0;border-radius:14px;background:#17181a;color:#fff;font:700 17px Lexend,sans-serif;padding:0 20px;min-height:56px;cursor:pointer;display:flex;align-items:center;gap:8px}
+.speak svg{width:22px;height:22px}
+.speak.on{background:#1f8f4d}
+.ctl{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.ctl button{border:1px solid #d9d6cd;background:#fff;color:#17181a;border-radius:10px;min-height:44px;padding:0 14px;font:700 15px "Atkinson Hyperlegible",sans-serif;cursor:pointer}
+.ctl span{font-size:14px;color:#55575c;margin-left:auto}
+.board{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.tile{border:0;border-radius:12px;min-height:64px;font:700 clamp(15px,1.6vw,19px) "Atkinson Hyperlegible",sans-serif;color:var(--tileink);cursor:pointer;box-shadow:inset 0 -4px 0 rgba(0,0,0,.14);transition:transform .12s}
+.tile:active{transform:translateY(2px);box-shadow:inset 0 -2px 0 rgba(0,0,0,.14)}
+.y{background:var(--y)}
+.g{background:var(--g)}
+.o{background:var(--o)}
+.bl{background:var(--b)}
+.pk{background:var(--p)}
+.recent{display:flex;gap:6px;flex-wrap:wrap;font-size:14px}
+.recent b{color:#55575c;font-weight:400;margin-right:4px;align-self:center}
+.recent button{border:1px dashed #c9c5ba;background:transparent;color:#17181a;border-radius:999px;padding:6px 12px;min-height:36px;font:14px "Atkinson Hyperlegible",sans-serif;cursor:pointer}
+.sr{position:absolute;left:-9999px}
+.note{font-size:14px;margin-top:12px;text-align:center;color:var(--bandink);opacity:.75}
+/* sections */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column}
+.card .meta{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 14px}
+.chip{font-size:14px;font-weight:700;padding:4px 10px;border-radius:999px;background:color-mix(in srgb,var(--g) 26%,transparent)}
+.chip.w{background:color-mix(in srgb,var(--y) 40%,transparent)}
+.card .go{margin-top:auto;font-weight:700}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px;margin-top:8px}
+.feat div{border-top:6px solid var(--c);padding-top:14px}
+.feat p{font-size:16px;color:var(--soft)}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+.road{list-style:none;margin:0;padding:0}
+.road li{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.road .n{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font:700 16px Lexend,sans-serif;background:var(--panel);border:1px solid var(--line)}
+.road .done .n{background:var(--g);color:var(--tileink);border-color:transparent}
+.road small{font-size:14px;color:var(--soft);white-space:nowrap}
+.road .done small{color:var(--ink);font-weight:700}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;padding:0;list-style:none}
+.stack li{border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-weight:700;font-size:15px}
+blockquote{margin:0 0 18px;padding:18px 20px;border-radius:14px;background:color-mix(in srgb,var(--p) 18%,var(--bg));font-size:18px}
+.tint{background:var(--panel);border-block:1px solid var(--line)}
+/* policy and support pages */
+.doc{max-width:780px;margin:0 auto}
+.doc h2{font-size:26px;margin:40px 0 10px}
+.doc h3{font-size:19px;margin:22px 0 6px}
+.doc ul{padding-left:22px;margin:0 0 14px}
+.doc li{margin:6px 0;max-width:62ch}
+.doc .date{font-size:15px;color:var(--bandink);opacity:.8;margin-top:12px}
+.sum{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:12px;margin-top:4px}
+.sum div{border-radius:14px;padding:16px;color:var(--tileink);box-shadow:inset 0 -4px 0 rgba(0,0,0,.12)}
+.sum b{display:block;font:700 18px/1.2 Lexend,sans-serif;margin-bottom:4px}
+.sum span{font-size:15px}
+details{border-bottom:1px solid var(--line);padding:4px 0}
+summary{cursor:pointer;font-weight:700;font-size:18px;padding:12px 0;min-height:44px}
+details p,details ol{margin:0 0 14px}
+.mail{display:inline-flex;align-items:center;gap:10px;font:700 clamp(18px,2.4vw,24px) Lexend,sans-serif;word-break:break-all}
+footer{background:var(--dev);color:#f3f1ea}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:end;justify-content:space-between}
+footer p{color:#c9c7c0}
+footer a{font-weight:700;color:#f3f1ea}
+footer .links{display:flex;flex-wrap:wrap;gap:6px 18px}
+@media(max-width:860px){.hero .wrap,.split{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.me{grid-template-columns:repeat(2,minmax(0,1fr))}.me div{min-height:104px;padding:14px}.me .big{grid-row:auto}.ipad{padding:10px;border-radius:24px}.screen{padding:10px;border-radius:16px}.board{grid-template-columns:repeat(3,minmax(0,1fr))}.speak span{display:none}.speak{padding:0 16px}.ctl span{margin-left:0;width:100%}nav .wrap{gap:0 12px}}
+@media(prefers-reduced-motion:reduce){.tile{transition:none}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
