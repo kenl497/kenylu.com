@@ -110,6 +110,27 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:end;justify-c
 footer p{color:#c9c7c0}
 footer a{font-weight:700;color:#f3f1ea}
 footer .links{display:flex;flex-wrap:wrap;gap:6px 18px}
+/* VoiceMe pages: colours from the app icon (orange, coral, magenta, purple) */
+.vm{--bandink:#ffffff;--vm1:#ff8a40;--vm2:#ff3c53;--vm3:#c52289;--vm4:#6a19a4}
+.vm nav,.vm .hero{background:linear-gradient(115deg,var(--vm4) 0%,var(--vm3) 40%,var(--vm2) 72%,var(--vm1) 100%);color:#fff}
+.vm nav{border-bottom-color:rgba(255,255,255,.2)}
+.vm .lede{opacity:.92}
+.vm .btn.solid{background:#fff;color:var(--vm4);border-color:#fff}
+.vm .hero .btn:not(.solid){border-color:#fff;color:#fff}
+.vm .note{opacity:.85}
+.app{display:flex;align-items:center;gap:18px}
+.appicon{width:clamp(56px,7vw,76px);height:auto;flex:none;border-radius:16px;box-shadow:0 0 0 3px rgba(255,255,255,.35),0 10px 24px -10px rgba(0,0,0,.45)}
+.vm .speak{background:linear-gradient(135deg,var(--vm1),var(--vm2) 45%,var(--vm3))}
+.vm .speak.on{background:var(--vm4)}
+.vm .road .done .n{background:var(--vm3);color:#fff}
+.vm blockquote{background:color-mix(in srgb,var(--vm3) 14%,var(--bg))}
+.vm .sum div{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-top:6px solid var(--vm2);box-shadow:none}
+.vm .sum .y{border-top-color:var(--vm1)}
+.vm .sum .g{border-top-color:var(--vm2)}
+.vm .sum .bl{border-top-color:var(--vm3)}
+.vm .sum .pk{border-top-color:var(--vm4)}
+.vm .doc .date{opacity:.9}
+@media(max-width:860px){.vm .hero{background:linear-gradient(165deg,var(--vm4) 0%,var(--vm3) 45%,var(--vm2) 78%,var(--vm1) 100%)}}
 @media(max-width:860px){.hero .wrap,.split{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:600px){.me{grid-template-columns:repeat(2,minmax(0,1fr))}.me div{min-height:104px;padding:14px}.me .big{grid-row:auto}.ipad{padding:10px;border-radius:24px}.screen{padding:10px;border-radius:16px}.board{grid-template-columns:repeat(3,minmax(0,1fr))}.speak span{display:none}.speak{padding:0 16px}.ctl span{margin-left:0;width:100%}nav .wrap{gap:0 12px}}
 @media(prefers-reduced-motion:reduce){.tile{transition:none}html{scroll-behavior:auto}}
