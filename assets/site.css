@@ -122,6 +122,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:6px 18px}
 .vm .note{opacity:.85}
 .app{display:flex;align-items:center;gap:18px}
 .appicon{width:clamp(56px,7vw,76px);height:auto;flex:none;border-radius:16px;box-shadow:0 0 0 3px rgba(255,255,255,.35),0 10px 24px -10px rgba(0,0,0,.45)}
+.vm .btn.kofi{background:linear-gradient(135deg,var(--vm2),var(--vm3));color:#fff;border-color:transparent}
 .vm .speak{background:linear-gradient(135deg,var(--vm1),var(--vm2) 45%,var(--vm3))}
 .vm .speak.on{background:var(--vm4)}
 .vm .road .done .n{background:var(--vm3);color:#fff}
