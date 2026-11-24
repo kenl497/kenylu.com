@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VoiceMe · kenylu.com</title>
+<meta name="description" content="VoiceMe is an iPad app for non-verbal kids who can read and type: write a word or sentence, press Speak, and the iPad says it.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Crect width='9' height='9' rx='2' fill='%2317181a'/%3E%3Crect x='11' width='9' height='9' rx='2' fill='%234cc47a'/%3E%3Crect y='11' width='9' height='9' rx='2' fill='%23ff9a4d'/%3E%3Crect x='11' y='11' width='9' height='9' rx='2' fill='%235b9dff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="mark" href="/"><i><b></b><b></b><b></b><b></b></i>Ken</a>
+  <a class="l" href="/">Home</a>
+  <a class="l" href="/voiceme/" aria-current="page">VoiceMe</a>
+  <a class="l" href="/voiceme/support/">Support</a>
+  <a class="l" href="#contact">Contact</a>
+</div></nav>
+
+<main>
+  <section class="hero band"><div class="wrap">
+    <div>
+      <h1>VoiceMe</h1>
+      <p class="lede">An iPad app for kids who can't speak but can read and type. Write a word or a sentence, press Speak, and the iPad says it. The words you use most stay a tap away.</p>
+      <div class="btns">
+        <a class="btn solid" href="#road">See the roadmap</a>
+        <a class="btn" href="#contact">Follow along</a>
+      </div>
+      <p class="lede" style="font-size:16px">Status: early build, not on the App Store yet.</p>
+    </div>
+    <div>
+      <div class="ipad" data-demo></div>
+      <p class="note">Interactive sketch. Speech uses your browser's voice; the app uses Apple's on-device voices.</p>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <h2>What it does</h2>
+    <div class="feat">
+      <div style="--c:var(--y)"><h3>Type, then speak</h3><p>A full keyboard and one big Speak button. Fast, clear speech that works with no internet.</p></div>
+      <div style="--c:var(--g)"><h3>Word and phrase bank</h3><p>Star favorites, group phrases, and keep the most-used ones on top. History size is adjustable.</p></div>
+      <div style="--c:var(--o)"><h3>History you can recall</h3><p>Say it again with one tap instead of typing it twice.</p></div>
+      <div style="--c:var(--b)"><h3>Audit log for caregivers</h3><p>A record of what was said, so parents, teachers and therapists can see how it's being used.</p></div>
+      <div style="--c:var(--p)"><h3>Accessible from the start</h3><p>Built around iPad accessibility, with Switch Control and Guided Access support planned.</p></div>
+      <div style="--c:var(--ink)"><h3>Keyboard help</h3><p>Accommodations for kids who read well but type slowly, including predictive text.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band tint" id="road"><div class="wrap split">
+    <div>
+      <h2>The build plan</h2>
+      <p>Nine phases, each one shippable on its own. The first goal was simple: type something and hear it. Everything else layers on top.</p>
+      <blockquote>Accessibility isn't a phase at the end. It's a rule for every phase.</blockquote>
+      <h3>Built with</h3>
+      <ul class="stack"><li>Swift</li><li>SwiftUI</li><li>AVSpeechSynthesizer</li><li>SwiftData</li><li>iPadOS</li><li>Mac Catalyst (later)</li></ul>
+    </div>
+    <ol class="road" id="roadmap"></ol>
+  </div></section>
+
+  <section class="band"><div class="wrap split">
+    <div>
+      <h2>Why I'm building it</h2>
+      <p>Communication apps for non-verbal kids are often expensive, cluttered, or built around picture grids that a fluent reader outgrows. VoiceMe is for the child who knows exactly what they want to say and just needs it said, quickly and in their own words.</p>
+      <p>Your words stay on your iPad. VoiceMe has no accounts, no ads and no tracking. <a href="/voiceme/privacy/">Read the privacy policy</a>.</p>
+    </div>
+    <div>
+      <h2>Want to help?</h2>
+      <p>If you're a parent, speech-language pathologist or teacher who works with AAC users, I'd love to hear what matters to you. Early testers welcome once there's a TestFlight build.</p>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+  </div></section>
+</main>
+
+<footer class="band" id="contact"><div class="wrap">
+  <div>
+    <h2>Say hello</h2>
+    <p>Questions, ideas or bug reports about VoiceMe are all welcome.</p>
+    <p>Email: <a href="mailto:ken.y.lu@gmail.com">ken.y.lu@gmail.com</a></p>
+  </div>
+  <div>
+    <p class="links"><a href="/">Home</a><a href="/voiceme/support/">Support</a><a href="/voiceme/privacy/">Privacy</a></p>
+    <p>© 2026 Ken · kenylu.com</p>
+  </div>
+</div></footer>
+<script src="/assets/voiceme.js"></script>
+</body>
+</html>
