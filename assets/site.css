@@ -110,6 +110,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:end;justify-c
 footer p{color:#c9c7c0}
 footer a{font-weight:700;color:#f3f1ea}
 footer .links{display:flex;flex-wrap:wrap;gap:6px 18px}
+.shot{padding:12px}
+.shot img{display:block;width:100%;height:auto;border-radius:18px;background:#fff}
 /* VoiceMe pages: colours from the app icon (orange, coral, magenta, purple) */
 .vm{--bandink:#ffffff;--vm1:#ff8a40;--vm2:#ff3c53;--vm3:#c52289;--vm4:#6a19a4}
 .vm nav,.vm .hero{background:linear-gradient(115deg,var(--vm4) 0%,var(--vm3) 40%,var(--vm2) 72%,var(--vm1) 100%);color:#fff}
